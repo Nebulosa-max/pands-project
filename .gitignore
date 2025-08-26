@@ -1,9 +1,3 @@
-# macOS
-.DS_Store
-
-# Jupyter
 .ipynb_checkpoints/
-
-# Anaconda/VS Code local stuff
 anaconda_projects/
 *.db
