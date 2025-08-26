@@ -1,0 +1,3 @@
+git add PROMPTS.md
+git commit -m "Document AI assistance (PROMPTS.md)"
+git push
