@@ -85,21 +85,44 @@ matplotlib>=3.7
 seaborn>=0.12
 scikit-learn>=1.1
 
-# PROMPTS / AI Assistance Log
+# AI Assistance Log (PROMPTS.md)
 
-I used ChatGPT to help plan, debug, and polish documentation. Below are paraphrased summaries of the prompts I used (no verbatim copying, just descriptions):
+This file documents how I used AI to help me complete the project.  
+All code and analysis were understood and typed by me; the AI acted as a tutor.
 
-1) **Repo setup & debugging**  
-   Asked: why my `analysis.py` couldn’t find `analysis.py` / CSV; how to structure folders; how to commit/push step by step.
+---
 
-2) **Iris pipeline**  
-   Asked: write a small script that loads Iris, generates `summary.txt`, saves histograms and scatter plots, and regenerates `data/iris.csv` from scikit-learn if missing.
+## Session 1 — 2025-08-25
+**Goal:** Get repo set up; make `analysis.py` scaffold; fix environment issues.  
+**Prompts (summary):**
+- “Help me make a small Iris analysis script that saves a CSV if missing, writes a summary, plots histograms and scatter plots.”
+- “Why does `python3 analysis.py` say the file isn’t found?”  
+**What I changed:**
+- Created `analysis.py` with functions: `get_data()`, `write_summary()`, `save_histograms()`, `save_scatter_plots()`.
+- Added `data/` and `images/` folders.
+- Committed incremental changes to GitHub.
 
-3) **Notebook**  
-   Asked: minimal notebook that loads `data/iris.csv`, prints shape/class counts/`describe()`, and draws simple histograms & scatter plots (saving to `images/`).
+## Session 2 — 2025-08-25
+**Goal:** Add a Jupyter notebook for a quick exploratory run.  
+**Prompts (summary):**
+- “Make a minimal notebook that loads `data/iris.csv`, shows shape & class counts, and plots histograms + scatter plots.”  
+**What I changed:**
+- Added `iris_analysis.ipynb` and ran cells.  
+- Confirmed images save into `images/`.
 
-4) **README polishing**  
-   Asked: organize the README so the examiner can run the project quickly; include references and an AI disclosure.
+## Session 3 — 2025-08-26
+**Goal:** Final polish and reproducibility.  
+**Prompts (summary):**
+- “Write a clean README with run instructions and references.”
+- “What should go in `requirements.txt`?”
+- “How do I ignore `.ipynb_checkpoints` and Anaconda artifacts?”  
+**What I changed:**
+- Wrote `README.md` with how-to-run, outputs, and references (including dataset link).
+- Added `requirements.txt` with pinned minimum versions.
+- Updated `.gitignore` to ignore local artifacts.
 
-All analysis / coding decisions were understood and typed in by me; I verified and executed the code locally.
+---
 
+## Academic Integrity Note
+I verified every suggestion, retyped/edited the code myself, and learned from the explanations.  
+Dataset source: UCI ML Repository (Iris) — see README for the link.
