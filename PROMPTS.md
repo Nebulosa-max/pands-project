@@ -1,89 +1,97 @@
 # AI Assistance Log (PROMPTS.md)
 
-This document explains how I used an AI assistant (ChatGPT) while completing this project.
-All coding decisions were understood by me and typed by me; the AI acted as a tutor/coach.
-Prompts are *summarised*, not verbatim.
+This file documents how I used AI (ChatGPT) to help me complete the project.  
+All code and analysis were understood and typed by me; the AI acted as a tutor.
 
 ---
 
-## How I used AI (summary)
-
-- Step-by-step guidance for Git/GitHub workflow (clone, add, commit, push).
-- Debugging error messages from Python/pandas and improving the script.
-- Designing a small pipeline that:
-  - creates `data/iris.csv` (from scikit-learn) if missing,
-  - writes a quick `summary.txt`,
-  - saves histograms and scatter plots to `images/`.
-- Creating a minimal Jupyter Notebook for quick exploration.
-- Polishing `README.md` (run instructions, references) and creating `requirements.txt`.
-
----
-
-## Sessions
-
-### Session 1 — 2025-08-25
-**Goal:** Get the repository set up locally, open it in VS Code, and confirm Python runs.  
+## Session 1 — 2025-08-25
+**Goal:** Get repository set up; make `analysis.py` scaffold; fix environment issues.  
 **Main prompts (summary):**
-- “Show me the exact git commands to clone, add, commit, push.”
-- “How do I run a Python file from the terminal in this folder?”
-**Outcome:** Repo cloned, terminal working in the project folder, simple sanity script created and executed.
+- “Help me make a small Iris analysis script that saves a CSV if missing, writes a summary, and plots histograms.”  
+- “Why does `python3 analysis.py` say the file isn’t found?”  
+**Outcome:**  
+- Created `analysis.py` with functions: `get_data()`, `write_summary()`, `save_histograms()`.  
+- Added `data/` and `images/` folders.  
+- Committed incremental changes to GitHub.
 
 ---
 
-### Session 2 — 2025-08-25
-**Goal:** Create `analysis.py` scaffold and verify libraries import.  
+## Session 2 — 2025-08-25
+**Goal:** Add a Jupyter notebook for exploratory run.  
 **Main prompts (summary):**
-- “Make a minimal script that imports pandas/matplotlib and prints a confirmation.”
-**Outcome:** `analysis.py` scaffold created; imports verified; committed to GitHub.
+- “Make a minimal notebook that loads `data/iris.csv`, shows shape & class counts, and plots histograms.”  
+**Outcome:**  
+- Added `iris_analysis.ipynb` and ran cells.  
+- Confirmed images save into `images/`.
 
 ---
 
-### Session 3 — 2025-08-25
-**Goal:** Build the Iris pipeline (CSV + summary + plots).  
+## Session 3 — 2025-08-25
+**Goal:** Polish documentation and reproducibility.  
 **Main prompts (summary):**
-- “Write functions to load Iris from scikit-learn, save `data/iris.csv`, write `summary.txt`, and save histograms and scatter plots into `images/`.”
-- “Add a `main()` that runs everything.”
-**Outcome:** Code added; running `python3 analysis.py` generated:
-- `data/iris.csv`
-- `summary.txt`
-- images in `images/` (histograms and scatter plots)  
-All files committed and pushed.
+- “Write a clean `README.md` with what the project contains and how to run it.”  
+- “What should go in `requirements.txt`?”  
+- “How do I ignore `.ipynb_checkpoints` and Anaconda artifacts?”  
+**Outcome:**  
+- Wrote `README.md` with run instructions, outputs, and references.  
+- Added `requirements.txt` with pinned minimum versions.  
+- Updated `.gitignore` to ignore local artifacts.
 
 ---
 
-### Session 4 — 2025-08-25
-**Goal:** Fix CSV parsing issues and regenerate clean data.  
+## Session 4 — 2025-08-25
+**Goal:** Verify pipeline works end-to-end.  
 **Main prompts (summary):**
-- “Explain the pandas ParserError and how to regenerate a clean CSV.”
-**Outcome:** Script now regenerates `data/iris.csv` from scikit-learn if the file is missing or invalid; rerun succeeded.
+- “How to create a simple pipeline that loads Iris, generates `summary.txt`, and saves histograms automatically?”  
+**Outcome:**  
+- Pipeline confirmed working: loads Iris from `data/iris.csv`, regenerates CSV if missing, writes `summary.txt`, and saves plots into `images/`.
 
 ---
 
-### Session 5 — 2025-08-25
-**Goal:** Create a Jupyter notebook for quick, visual exploration.  
+## Session 5 — 2025-08-25
+**Goal:** Debug issues with pandas and regenerate clean CSV.  
 **Main prompts (summary):**
-- “Create `iris_analysis.ipynb` that loads `data/iris.csv`, shows `head()`, class counts, and a couple of plots.”
-**Outcome:** Notebook created and saved in repo root; confirmed it runs locally; committed to GitHub.
+- “Why does pandas show ‘file not found’ or invalid header errors?”  
+**Outcome:**  
+- Fixed header assignment for Iris dataset.  
+- Confirmed correct DataFrame with class counts.  
+- Pipeline runs without errors.
 
 ---
 
-### Session 6 — 2025-08-25
-**Goal:** Polish documentation & reproducibility.  
+## Session 6 — 2025-08-25
+**Goal:** Final polish and reproducibility.  
 **Main prompts (summary):**
-- “Write a clean `README.md` with what the project contains and how to run it.”
-- “What goes into `requirements.txt` for this project?”
-**Outcome:** `README.md` updated with run steps and references; `requirements.txt` added with pinned minimum versions.
+- “Write a clean `README.md` with what the project contains and how to run it.”  
+- “What goes into `requirements.txt` for this project?”  
+**Outcome:**  
+- `README.md` updated with run steps and references.  
+- `requirements.txt` added with pinned minimum versions.
 
 ---
 
-### Session 7 — 2025-08-26
+## Session 7 — 2025-08-26
 **Goal:** Transparency about AI usage.  
 **Main prompts (summary):**
-- “How should I disclose AI help for this assignment?”
-**Outcome:** Short disclosure added to `README.md`; full log recorded in `PROMPTS.md` (this file).
+- “How should I disclose AI help for this assignment?”  
+**Outcome:**  
+- Added short disclosure to `README.md`.  
+- Full log recorded here in `PROMPTS.md`.
 
 ---
 
 ## Notes
-- Any files/folders created automatically by tools (e.g., `.ipynb_checkpoints/`, `anaconda_projects/`, `*.db`) are ignored via `.gitignore`.
+- Any files/folders created automatically by tools (e.g., `.ipynb_checkpoints/`, `anaconda_projects/`, `*.db`) are ignored via `.gitignore`.  
 - All plots and CSVs were generated by running the code in this repository.
+
+---
+
+## Why AI was used
+I used ChatGPT as a tutor to:
+- Clarify instructions when I was stuck.  
+- Learn how to structure commits and GitHub Issues properly.  
+- Debug error messages in Python and Git.  
+- Polish documentation (`README.md` and `PROMPTS.md`).
+
+All coding was understood and typed by me, and I verified each step locally.
