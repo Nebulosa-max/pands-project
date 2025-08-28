@@ -7,61 +7,66 @@ It is designed to be easy to run and easy to mark: clear structure, reproducible
 
 ## Repository Structure
 
-analysis.py           # Main script: generates/validates data, summary, and plots
-iris_analysis.ipynb   # Notebook: mini exploration with outputs
-data/
-└─ iris.csv         # Local copy of dataset (auto-generated if missing)
-images/               # Auto-generated plots from analysis.py (PNGs)
-summary.txt           # Auto-generated text summary
-requirements.txt      # Python packages (for quick setup)
-PROMPTS.md            # AI assistance log (how ChatGPT was used as a tutor)
-.gitignore            # Ignore system / tool artifacts
+- `analysis.py` → Main script: generates/validates data, summary, and plots  
+- `iris_analysis.ipynb` → Notebook: mini exploration with outputs  
+- `data/iris.csv` → Local copy of dataset (auto-generated if missing)  
+- `images/` → Auto-generated plots (histograms + scatter plots)  
+- `summary.txt` → Auto-generated text summary  
+- `requirements.txt` → Python packages (for quick setup)  
+- `PROMPTS.md` → AI assistance log (how ChatGPT was used as tutor)  
+- `.gitignore` → Ignore system/tool artifacts  
 
 ---
 
-## What the code does
+## What the Code Does
 
-- Loads the Iris dataset (from `data/iris.csv`, or regenerates it from scikit-learn if missing).  
+- Loads the Iris dataset (`data/iris.csv`, or regenerates it from scikit-learn if missing).  
 - Writes a short text summary to `summary.txt`.  
-- Saves histograms and pairwise scatter plots into `images/`.
+- Saves histograms and pairwise scatter plots into `images/`.  
 
 ---
 
-## How to run (script)
+## How to Run (script)
 
+1. **Clone the repository**
+   
 ```bash
-# 1) clone
-git clone https://github.com/USERNAME/pands-project.git
-cd pands-project
+   git clone https://github.com/USERNAME/pands-project.git
+   cd pands-project
 
-# 2) create & activate an environment (conda or venv — either is fine)
+2.	Create & activate and environment
+ 
+(conda or venv — either is fine)
+ •	Conda example:
 
-# conda (example):
 conda create -n iris python=3.10 -y
 conda activate iris
+ •	venv example:
 
-# or venv (example):
-python3 -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python3 -m venv .venvsource .venv/bin/activate   
+# Mac/Linux
+.venv\Scripts\activate      # Windows
 
-# 3) install dependencies
+3.	Install dependencies
+
 pip install -r requirements.txt
 
-# 4) run
+4.	Run the script
+
 python3 analysis.py
 
 Outputs will appear in:
 	•	summary.txt
 	•	images/*.png
-	•	(re)generated data/iris.csv if it didn’t exist
+	•	(Re)generated data/iris.csv if it didn’t exist
 
 ⸻
 
-How to run (notebook)
+How to Run (notebook)
 
-Open iris_analysis.ipynb in VS Code or Jupyter and Run All.
+Open iris_analysis.ipynb in VS Code or Jupyter and run all cells.
 
-If you move the notebook under a notebooks/ folder, update any relative paths to ../images/... and ../data/iris.csv.
+If you move the notebook under a notebooks/ folder, update any relative paths to ../images/ and ../data/iris.csv.
 
 ⸻
 
