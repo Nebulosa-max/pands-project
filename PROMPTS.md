@@ -94,4 +94,5 @@ I used ChatGPT as a tutor to:
 - Debug error messages in Python and Git.  
 - Polish documentation (`README.md` and `PROMPTS.md`).
 
+# AI Assistance Log (PROMPTS.md)
 All coding was understood and typed by me, and I verified each step locally.
