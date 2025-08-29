@@ -38,7 +38,7 @@ The project is designed to be easy to run and easy to mark, with:
 git clone https://github.com/USERNAME/pands-project.git
 cd pands-project
 
-## 2.Create & activate and environment## 
+## 2.Create & activate and environment ## 
 (conda or venv — either is fine)
 
 •	Conda example:
@@ -50,20 +50,20 @@ conda activate iris
 
 python3 -m venv .venv
 source .venv/bin/activate   
- ## Mac/Linux##
+ ## Mac/Linux ##
 
 .venv\Scripts\activate      
-## Windows##
+## Windows ##
 
  #3.Install dependencies #
 
 pip install -r requirements.txt 
 
-## 4.Run the script*##
+## 4.Run the script ##
 
 python3 analysis.py
 
- ## - Outputs will appear in:##
+ ## - Outputs will appear in: ##
 	•	summary.txt
 	•	images/*.png
 	•	Regenerated data/iris.csv (if it didn’t exist)
@@ -84,7 +84,7 @@ python3 analysis.py
 
 ⸻
 
-## Findings (brief)##
+## Findings (brief) ##
 	•	Each class has 50 rows (balanced).
 	•	Petal measurements separate the classes more clearly than sepal measurements.
 	•	Histograms suggest different spreads/centres across classes.
@@ -101,7 +101,7 @@ See requirements.txt (minimum versions pinned for the marker):
 
 ⸻
 
-## References##
+## References ##
 	•	Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems.
 	•	UCI ML Repository: Iris dataset.
 	•	scikit-learn: sklearn.datasets.load_iris used to regenerate CSV if missing.
@@ -109,7 +109,7 @@ See requirements.txt (minimum versions pinned for the marker):
 
 ⸻
 
-## AI Assistance (disclosure)##
+## AI Assistance (disclosure) ##
 
 •	I used an AI assistant (ChatGPT) as a tutor to plan, debug, and polish documentation.
 •	All code was understood and typed by me — no code was blindly copied.
